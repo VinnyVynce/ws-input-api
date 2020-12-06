@@ -10,7 +10,7 @@ var httpServer = http.createServer().listen(wsPort);
 http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' })
   fs.createReadStream('index.html').pipe(res)
-}).listen(80)
+}).listen(42080)
 
 var wss = new WebSocketServer({ server: httpServer });
 
@@ -50,4 +50,5 @@ wss.on('connection', function (ws) {
     });
 });
 
-console.log('Listening on port:', wsPort);
+console.log('webgui listening on port: 42080');
+console.log('ws listening on port:', wsPort);
