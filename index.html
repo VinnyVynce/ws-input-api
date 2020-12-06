@@ -5,18 +5,16 @@
 	<body>
 		<script>
 			var streamer = new WSAudioAPI.Streamer({
-				server: 'wss://192.168.99.100:5000' // dont't forget about scheme 
+				server: 'wss://127.0.0.1:5000' // dont't forget about scheme 
 			});
 	    var player = new WSAudioAPI.Player({
-        server: 'wss://192.168.99.100:5000' // dont't forget about scheme
+        server: 'wss://127.0.0.1:5000' // dont't forget about scheme
     	});
 		</script>
 
 		<button onclick="streamer.start()">Start stream</button>
 		<button onclick="streamer.stop()">Stop stream</button>
-		
-		< hr />
-		
+    < br/>
 		<button onclick="player.start()">Play stream</button>
 		<button onclick="player.stop()">Stop playing</button>
 	</body>
